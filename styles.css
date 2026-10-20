@@ -206,6 +206,20 @@ button { font: inherit; color: inherit; }
 .tag { font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: rgba(198, 255, 61, .12); color: var(--accent); }
 .date { font-size: 13px; color: var(--muted); }
 
+/* ---------- Tarjetas de proyecto ---------- */
+.proj-grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); }
+.proj-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px 24px; display: grid; gap: 12px; align-content: start;
+  transition: transform .3s var(--ease), border-color .3s, box-shadow .3s;
+}
+.proj-card:hover { transform: translateY(-6px); border-color: rgba(198, 255, 61, .45); box-shadow: 0 30px 60px rgba(0, 0, 0, .5), 0 0 40px rgba(124, 92, 255, .25); }
+.proj-num { font-family: var(--display); color: var(--accent); font-size: 13px; }
+.proj-card h3 { margin: 0; font-family: var(--display); font-weight: 600; font-size: 22px; }
+.proj-card p { margin: 0; color: var(--muted); font-size: 15px; }
+.proj-link { justify-self: start; text-decoration: none; font-weight: 600; padding-bottom: 2px; border-bottom: 1px solid var(--line); transition: color .2s, border-color .2s; }
+.proj-link:hover { color: var(--accent); border-color: var(--accent); }
+
 /* ---------- Reproductor ---------- */
 .player { width: min(1100px, 94vw); max-width: none; max-height: 94vh; padding: 0; border: 0; background: transparent; color: var(--text); overflow: visible; }
 .player::backdrop { background: rgba(4, 4, 8, .82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }

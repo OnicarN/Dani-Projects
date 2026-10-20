@@ -1,6 +1,6 @@
 # Dani Projects
 
-Galería de vídeos con animaciones 3D. Es una web estática (HTML, CSS y JavaScript), sin instalar nada.
+Portfolio con animaciones 3D: una sección de proyectos y una galería de vídeos. Es una web estática (HTML, CSS y JavaScript), sin instalar nada.
 
 ## Verla en tu ordenador
 
@@ -14,7 +14,7 @@ Haz doble clic en `index.html`.
    - Marca **Public**.
    - Pulsa **Create repository**.
 3. En la página del repositorio pulsa **uploading an existing file**.
-4. Arrastra **todo el contenido** de esta carpeta (`index.html`, `styles.css`, `app.js`, `videos.js`, `.nojekyll` y las carpetas `videos` e `img`) y pulsa **Commit changes**.
+4. Arrastra **todo el contenido** de esta carpeta (`index.html`, `styles.css`, `app.js`, `videos.js`, `projects.js`, `.nojekyll` y las carpetas `videos` e `img`) y pulsa **Commit changes**.
 5. Ve a **Settings → Pages**.
    - En *Source* elige **Deploy from a branch**.
    - En *Branch* elige **main** y la carpeta **/ (root)**. Pulsa **Save**.
@@ -24,6 +24,10 @@ Haz doble clic en `index.html`.
 Ese es el enlace que le pasas a tu profesor.
 
 > Si `.nojekyll` no aparece al arrastrar (los archivos que empiezan por punto a veces se ocultan), no pasa nada: la web funciona igual.
+
+## Añadir un proyecto nuevo
+
+Abre `projects.js` y copia uno de los bloques `{ ... }` cambiando el título, la descripción, las etiquetas y el enlace (a GitHub o a `#galeria`).
 
 ## Añadir un vídeo nuevo
 

@@ -7,6 +7,20 @@
   $('year').textContent = new Date().getFullYear();
   $('count').textContent = `${videos.length} ${videos.length === 1 ? 'vídeo' : 'vídeos'}`;
 
+  /* ---------- Rejilla de proyectos ---------- */
+  const projects = window.PROJECTS || [];
+  const projGrid = $('projGrid');
+  if (projGrid) {
+    projGrid.innerHTML = projects.map((p, i) => `
+      <article class="proj-card reveal" style="transition-delay:${(i % 3) * 0.08}s">
+        <span class="proj-num">${String(i + 1).padStart(2, '0')}</span>
+        <h3>${esc(p.title)}</h3>
+        <p>${esc(p.description)}</p>
+        <div class="tags">${(p.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+        <a class="proj-link" href="${esc(p.link)}" ${p.link?.startsWith('http') ? 'target="_blank" rel="noopener"' : ''}>${esc(p.linkLabel || 'Ver más')}</a>
+      </article>`).join('');
+  }
+
   /* ---------- Título 3D que sigue al ratón ---------- */
   const title = $('title3d');
   if (!reduced) {
